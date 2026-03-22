@@ -450,7 +450,6 @@ int main() {
                 //set job to stopped
                 printf("\npid[%d]   process stopped: %s\n", foreground_job.pgid, foreground_job.tostring);
                 int index = findJobByPgid(foreground_job.pgid, &jobs);
-                printf("found index: %d\n", index);
                 jobs.array[index].stopped = 1;
                 memset(&foreground_job, 0, sizeof(Job));
             }
